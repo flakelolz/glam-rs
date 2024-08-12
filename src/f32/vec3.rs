@@ -15,7 +15,7 @@ pub const fn vec3(x: f32, y: f32, z: f32) -> Vec3 {
 }
 
 /// A 3-dimensional vector.
-#[derive(Clone, Copy, PartialEq)]
+#[derive(Clone, Copy, PartialEq, flecs_ecs::prelude::Component)]
 #[cfg_attr(not(target_arch = "spirv"), repr(C))]
 #[cfg_attr(target_arch = "spirv", repr(simd))]
 pub struct Vec3 {
