@@ -1,6 +1,7 @@
 // Generated from vec.rs.tera template. Edit the template, not the generated file.
 
 use crate::{f32::math, BVec3, BVec3A, Vec2, Vec4};
+use flecs_ecs::prelude::Component;
 
 #[cfg(not(target_arch = "spirv"))]
 use core::fmt;
@@ -15,7 +16,7 @@ pub const fn vec3(x: f32, y: f32, z: f32) -> Vec3 {
 }
 
 /// A 3-dimensional vector.
-#[derive(Clone, Copy, PartialEq, flecs_ecs::prelude::Component)]
+#[derive(Clone, Copy, PartialEq, Component)]
 #[cfg_attr(not(target_arch = "spirv"), repr(C))]
 #[cfg_attr(target_arch = "spirv", repr(simd))]
 #[meta]

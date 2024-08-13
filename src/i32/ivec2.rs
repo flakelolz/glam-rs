@@ -1,6 +1,7 @@
 // Generated from vec.rs.tera template. Edit the template, not the generated file.
 
 use crate::{BVec2, I16Vec2, I64Vec2, IVec3, U16Vec2, U64Vec2, UVec2};
+use flecs_ecs::prelude::Component;
 
 #[cfg(not(target_arch = "spirv"))]
 use core::fmt;
@@ -16,7 +17,7 @@ pub const fn ivec2(x: i32, y: i32) -> IVec2 {
 
 /// A 2-dimensional vector.
 #[cfg_attr(not(target_arch = "spirv"), derive(Hash))]
-#[derive(Clone, Copy, PartialEq, Eq, flecs_ecs::prelude::Component)]
+#[derive(Clone, Copy, PartialEq, Eq, Component)]
 #[cfg_attr(feature = "cuda", repr(align(8)))]
 #[cfg_attr(not(target_arch = "spirv"), repr(C))]
 #[cfg_attr(target_arch = "spirv", repr(simd))]
