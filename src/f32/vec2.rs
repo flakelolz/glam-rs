@@ -19,6 +19,7 @@ pub const fn vec2(x: f32, y: f32) -> Vec2 {
 #[cfg_attr(feature = "cuda", repr(align(8)))]
 #[cfg_attr(not(target_arch = "spirv"), repr(C))]
 #[cfg_attr(target_arch = "spirv", repr(simd))]
+#[meta]
 pub struct Vec2 {
     pub x: f32,
     pub y: f32,

@@ -19,6 +19,7 @@ pub const fn ivec3(x: i32, y: i32, z: i32) -> IVec3 {
 #[derive(Clone, Copy, PartialEq, Eq, flecs_ecs::prelude::Component)]
 #[cfg_attr(not(target_arch = "spirv"), repr(C))]
 #[cfg_attr(target_arch = "spirv", repr(simd))]
+#[meta]
 pub struct IVec3 {
     pub x: i32,
     pub y: i32,
