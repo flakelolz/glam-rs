@@ -29,9 +29,11 @@ pub struct IVec2 {
 
 impl IVec2 {
     /// Makes the y axis negative.
-    pub fn neg_y(&mut self) -> &mut Self {
-        self.y = -self.y;
-        self
+    pub fn neg_y(self) -> Self {
+        Self {
+            x: self.x,
+            y: -self.y,
+        }
     }
 
     /// All zeroes.
