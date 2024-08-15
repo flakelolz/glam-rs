@@ -28,6 +28,11 @@ pub struct IVec2 {
 }
 
 impl IVec2 {
+    /// Reverse the y-axis
+    pub fn rev_y(&mut self) {
+        self.y *= -1
+    }
+
     /// All zeroes.
     pub const ZERO: Self = Self::splat(0);
 
